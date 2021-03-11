@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Math equations</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <br />
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <input id="firstAdd" />
+        </div>
+        <div class="col-sm-1">
+          <h1>+</h1>
+        </div>
+        <div class="col-sm-3">
+          <input id="secondAdd" />
+        </div>
+        <div class="col-sm-1">
+          <button type="submit" class="btn" onclick="finalAdd()">=</button>
+        </div>
+        <div class="col-sm-3">
+          <h1 id="finalAdd"></h1>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <input id="firstMultiply" />
+        </div>
+        <div class="col-sm-1">
+          <h1>x</h1>
+        </div>
+        <div class="col-sm-3">
+          <input id="secondMultiply" />
+        </div>
+        <div class="col-sm-1">
+          <button type="submit" class="btn" onclick="finalMultiply()">=</button>
+        </div>
+        <div class="col-sm-3">
+          <h1 id="finalMultiply"></h1>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <input id="firstDivide" />
+        </div>
+        <div class="col-sm-1">
+          <h1>/</h1>
+        </div>
+        <div class="col-sm-3">
+          <input id="secondDivide" />
+        </div>
+        <div class="col-sm-1">
+          <button type="submit" class="btn" onclick="finalDivide()">=</button>
+        </div>
+        <div class="col-sm-3">
+          <h1 id="finalDivide"></h1>
+        </div>
+      </div>
+    </div>
+    <script>
+      function finalAdd() {
+        var first = parseInt(document.getElementById("firstAdd").value);
+        var second = parseInt(document.getElementById("secondAdd").value);
+        var final = first + second;
+        document.getElementById("finalAdd").innerHTML = final;
+      }
+      function finalMultiply() {
+        var first = parseInt(document.getElementById("firstMultiply").value);
+        var second = parseInt(document.getElementById("secondMultiply").value);
+        var final = first * second;
+        document.getElementById("finalMultiply").innerHTML = final;
+      }
+      function finalDivide() {
+        var first = parseInt(document.getElementById("firstDivide").value);
+        var second = parseInt(document.getElementById("secondDivide").value);
+        var final = first / second;
+        document.getElementById("finalDivide").innerHTML = final;
+      }
+    </script>
+  </body>
+</html>
